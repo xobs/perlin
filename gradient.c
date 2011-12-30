@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int perlin_init(int *p, float *gx, float *gy, int size) {
+int perlin_init(int *p, float *gx, float *gy, int size, unsigned seed) {
     int i;
+    srand(seed);
     for (i=0; i<size; i++)
         p[i] = i;
 
